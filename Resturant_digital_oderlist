@@ -1,0 +1,93 @@
+print("OUR RESTAURANT")
+print("You can order digitally here")
+print()
+print("1. Cheese Sandwich - Rs.110")
+print("2. Veg Noodles - Rs.130")
+print("3. Ramen - Rs.170")
+print("4. Paneer Tikka - Rs.200")
+print("5. Icecream - Rs.90")
+print("6. Cold Drink - Rs.70")
+print("7. Chhole Bhature - Rs.110")
+print("8. Pizza - Rs.250")
+print("9. Burger - Rs.150")
+print("10. French Fries - Rs.100")
+print("11. Chicken tikka masala - Rs. 300")
+print("12. Cake - Rs. 400/kg")
+print("13. Paratha - Rs. 180")
+
+Name = str(input("Enter Your Name:- "))
+print("Good Morning", Name , "What do you wanna eat?")
+phone_no = int(input("Please enter your Valid phone number for online invoice of your bill:-" ))
+
+n = int(input("How many items do you want to order? "))
+
+if n < 1 or n > 13:
+    print("Please enter between 1 and 13.")
+else:
+    total = 0
+    order_history = []
+
+    for i in range(n):
+        order = input("Enter your order: ")
+
+        if order == "Cheese Sandwich":
+            price = 110
+
+        elif order == "Veg Noodles":
+            price = 130
+
+        elif order == "Ramen":
+            price = 170
+
+        elif order == "Paneer Tikka":
+            price = 200
+
+        elif order == "Icecream":
+            price = 90
+
+        elif order == "Cold Drink":
+            price = 70
+
+        elif order == "Chhole Bhature":
+            price = 110
+
+        elif order == "Pizza":
+            price = 250
+
+        elif order == "Burger":
+            price = 150
+
+        elif order == "Chicken tikka masala":
+            price = 300
+
+        elif order == "Cake":
+            price = 400
+
+        elif order == "Paratha":
+            price = 180
+
+        elif order == "French Fries":
+            price = 100
+
+        
+
+        else:
+            print("Sorry, this item is not available.")
+            continue
+
+        total = total + price
+        order_history.append(order)
+
+    print()
+    print("========================================================")
+    print("Your Order History:")
+
+    for order in order_history:
+        print("-", order)
+    print("========================================================")
+    print("Total Bill = Rs.", total)
+    print("online invoice will be sent on yout phone number:", phone_no )
+    print("========================================================")
+    print("Greetings, Have a good day sir\ maam your food will be on your table ")
+    print("Thank you for ordering!")
+    print("========================================================")
